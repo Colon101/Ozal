@@ -1,149 +1,185 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Navigation.Master.cs" Inherits="Ozal.Site1" %>
 
-<!DOCTYPE html>
+  <!DOCTYPE html>
 
-<html>
-<head runat="server">
+  <html>
+
+  <head runat="server">
     <style>
-        :root {
-          --bg-color: rgb(20, 20, 20);
-          --card-color: rgb(23, 23, 23);
+      :root {
+        --bg-color: rgb(20, 20, 20);
+        --card-color: rgb(23, 23, 23);
+      }
+
+      body {
+        background-color: var(--bg-color);
+
+        justify-content: center;
+        margin: 0px;
+        padding: 0px;
+        color: white;
+      }
+
+      h1 {
+        font-weight: 700;
+        text-align: center;
+        font-family: Arial;
+        text-decoration: underline;
+        font-size: 40px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Segoe UI';
+      }
+
+      .nav {
+        width: 100%;
+        background-color: #1A237E;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        /* Add this line */
+        top: 0;
+        /* Add this line */
+        left: 0;
+        /* Add this line */
+        z-index: 1000;
+        /* Add this line to ensure it's above other content */
+      }
+
+      .nav>.nav-header {
+        flex: 0.95;
+        padding-left: 1rem;
+      }
+
+      .nav>.nav-header>.nav-title {
+        font-size: 22px;
+        color: #fff;
+      }
+
+      .nav>.nav-list {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .nav>.nav-list>li {
+        list-style-type: none;
+      }
+
+      .nav>.nav-list>li a {
+        text-decoration: none;
+        color: #efefef;
+        cursor: pointer;
+      }
+
+      .nav>#nav-check {
+        display: none;
+      }
+
+      @media (max-width: 1000px) {
+        .nav {
+          padding: 1rem;
         }
 
-        body {
-          background-color: var(--bg-color);
-          
-          justify-content: center;
-          margin: 0px;
-          padding: 0px;
+        .nav>.nav-btn {
+          display: inline-block;
+          position: absolute;
+          right: 0;
+          top: 0;
+          padding-top: 0.2rem;
         }
-        h1{
-            font-weight:700;
-            text-align:center;
-            font-family:Arial;
-            text-decoration:underline;
-            font-size:40px;
-        }* {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  font-family: 'Segoe UI';
-}
-.nav {
-  width: 100%;
-  background-color: #1A237E;
-  display: flex;
-  align-items: center;
-}
-.nav > .nav-header {
-  flex: 0.95;
-  padding-left: 1rem;
-}
-.nav > .nav-header > .nav-title {
-  font-size: 22px;
-  color: #fff;
-}
-.nav > .nav-list {
-  display: flex;
-  gap: 2rem;
-}
-.nav > .nav-list > li {
-  list-style-type: none;
-}
-.nav > .nav-list > li a {
-  text-decoration: none;
-  color: #efefef;
-  cursor: pointer;
-}
-.nav > #nav-check {
-    display: none;
-}
-@media (max-width: 700px) {
-  .nav {
-    padding: 1rem;
-  }
-  .nav > .nav-btn {
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding-top: 0.2rem;
-  }
-  .nav > .nav-btn > label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 13px;
-  }
-  .nav > .nav-btn > label > span {
-    display: block;
-    width: 25px;
-    height: 10px;
-    border-top: 2px solid #eee;
-  }
-  .nav > .nav-list {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-    background-color: #1A237E;
-    height: 0;
-    transition: all 0.3s ease-in;
-    top: 40px;
-    left: 0;
-    overflow: hidden;
-  }
-  .nav > .nav-list > li {
-    width: 100%;
-    margin-top: 1.5rem;
-  }
-  .nav > #nav-check:checked ~ .nav-list {
-    height: calc(100vh - 60px);
-  }
-}
-a{
-    text-decoration:none;
-    color:white;
-    font-weight:800;
-   
-}
+
+        .nav>.nav-btn>label {
+          display: inline-block;
+          width: 50px;
+          height: 50px;
+          padding: 13px;
+        }
+
+        .nav>.nav-btn>label>span {
+          display: block;
+          width: 25px;
+          height: 10px;
+          border-top: 2px solid #eee;
+        }
+
+        .nav>.nav-list {
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          width: 100%;
+          background-color: #1A237E;
+          height: 0;
+          transition: all 0.3s ease-in;
+          top: 40px;
+          left: 0;
+          overflow: hidden;
+        }
+
+        .nav>.nav-list>li {
+          width: 100%;
+          margin-top: 1.5rem;
+        }
+
+        .nav>#nav-check:checked~.nav-list {
+          height: calc(100vh - 60px);
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-weight: 800;
+
+      }
+
+      .nav-helper {
+        height: 40px;
+      }
     </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-</head>
-<body>
+  </head>
 
-        <div>
-                    <nav class="nav">
-  <input type="checkbox" id="nav-check">
-  <div class="nav-header">
-    <div class="nav-title">
-       <a href="/">HipHop Geniuses</a>
-      
-    </div>
-  </div>
-  <div class="nav-btn">
-    <label for="nav-check">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-  </div>
-  
-  <ul class="nav-list">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Charts</a></li>
-    <li><a href="#">History</a></li>
-      <li><a href="#">Log in</a></li>
-      <li><a href="#">Sign Up</a></li>
-  </ul>
-</nav>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+  <body>
+    <div class="nav-helper">im here to help</div>
+    <div>
+      <nav class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            <a href="/">HipHop Geniuses</a>
 
-            </asp:ContentPlaceHolder>
+          </div>
         </div>
-    
-</body>
-</html>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+
+        <ul class="nav-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Charts</a></li>
+          <li><a href="#">History</a></li>
+          <li><a href="#">Log in</a></li>
+          <li><a href="#">Sign Up</a></li>
+        </ul>
+      </nav>
+    </div>
+    <main>
+      <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+      </asp:ContentPlaceHolder>
+    </main>
+  </body>
+
+  </html>
