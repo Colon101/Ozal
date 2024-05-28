@@ -321,7 +321,7 @@
                 </div>
                 <div class="user-reviews">
                     <h3>Kanye West Reviews</h3>
-                    <ul>
+                    <ul id="userReviewsList">
                         <!-- Example Reviews -->
                         <li>
                             <blockquote>

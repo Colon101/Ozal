@@ -67,26 +67,79 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="history.aspx" />
     <Content Include="kanye.aspx" />
+    <Content Include="kendrick.aspx" />
+    <Content Include="LICENSE.txt" />
     <Content Include="local\kanye-wiki.jpg" />
     <Content Include="local\kanye.jpg" />
+    <Content Include="local\kendrick-wiki.jpg" />
     <Content Include="local\kendrick.jpeg" />
+    <Content Include="local\metro-wiki.jpg" />
     <Content Include="local\metro.jpg" />
     <Content Include="local\mf.jpg" />
+    <Content Include="local\mfdoom-wiki.jpg" />
     <Content Include="local\staroutline.png" />
     <Content Include="local\swift.png" />
     <Content Include="local\tupac.jpg" />
+    <Content Include="login.aspx" />
+    <Content Include="signup.aspx" />
+    <Content Include="metro.aspx" />
+    <Content Include="mfdoom.aspx" />
     <Content Include="taylor.aspx" />
+    <Content Include="tupac.aspx" />
     <Content Include="Web.config" />
     <Content Include="home.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="history.aspx.cs">
+      <DependentUpon>history.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="history.aspx.designer.cs">
+      <DependentUpon>history.aspx</DependentUpon>
+    </Compile>
     <Compile Include="kanye.aspx.cs">
       <DependentUpon>kanye.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="kanye.aspx.designer.cs">
       <DependentUpon>kanye.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="kendrick.aspx.cs">
+      <DependentUpon>kendrick.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="kendrick.aspx.designer.cs">
+      <DependentUpon>kendrick.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signup.aspx.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signup.aspx.designer.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="metro.aspx.cs">
+      <DependentUpon>metro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="metro.aspx.designer.cs">
+      <DependentUpon>metro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mfdoom.aspx.cs">
+      <DependentUpon>mfdoom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mfdoom.aspx.designer.cs">
+      <DependentUpon>mfdoom.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Navigation.Master.cs">
@@ -109,6 +162,13 @@
     </Compile>
     <Compile Include="taylor.aspx.designer.cs">
       <DependentUpon>taylor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tupac.aspx.cs">
+      <DependentUpon>tupac.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tupac.aspx.designer.cs">
+      <DependentUpon>tupac.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

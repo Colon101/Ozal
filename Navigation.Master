@@ -167,11 +167,11 @@
         </div>
 
         <ul class="nav-list">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Charts</a></li>
-          <li><a href="#">History</a></li>
-          <li><a href="#">Log in</a></li>
-          <li><a href="#">Sign Up</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="https://www.officialcharts.com/charts/official-hip-hop-and-r-and-b-singles-chart/">Charts</a></li>
+          <li><a href="history.aspx">History</a></li>
+          <li><a href="login.aspx">Log in</a></li>
+          <li><a href="signup.aspx">Sign Up</a></li>
         </ul>
       </nav>
     </div>

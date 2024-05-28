@@ -259,7 +259,7 @@
       .maincontainer {
         display: flex;
         justify-content: center;
-        padding-top: 30px;
+        padding-top: 50px;
       }
 
       .pfp {
@@ -308,29 +308,32 @@
 
     <div class="maincontainer">
       <div id="cards">
-        <div class="card">
-          <div class="card-content">
-            <div class="Title">
-              <div class="pfp mf">
+        <a href="mfdoom.aspx">
+          <div class="card">
+            <div class="card-content">
+              <div class="Title">
+                <div class="pfp mf">
 
+                </div>
+                <div class="card-info-title ">
+                  <h3>MF DOOM
+                  </h3>
+                </div>
               </div>
-              <div class="card-info-title ">
-                <h3>MF DOOM
-                </h3>
-              </div>
-            </div>
-            <div class="card-info-title">
-              <h4>
+              <div class="card-info-title">
+                <h4>
 
-                MF DOOM, a legendary figure in hip-hop, is known for his intricate rhymes, distinctive masked persona,
-                and innovative production. With a career spanning decades, he has left an indelible mark on the genre,
-                blending complex wordplay with diverse musical influences. His enigmatic presence and boundary-pushing
-                creativity have cemented him as one of the most influential and revered artists in the history of
-                hip-hop.
-              </h4>
+                  MF DOOM, a legendary figure in hip-hop, is known for his intricate rhymes, distinctive masked persona,
+                  and innovative production. With a career spanning decades, he has left an indelible mark on the genre,
+                  blending complex wordplay with diverse musical influences. His enigmatic presence and boundary-pushing
+                  creativity have cemented him as one of the most influential and revered artists in the history of
+                  hip-hop.
+                </h4>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
+          <a href="kendrick.aspx">
         <div class="card">
           <div class="card-content">
             <div class="Title">
@@ -354,6 +357,8 @@
             </div>
           </div>
         </div>
+              </a>
+        <a href="tupac.aspx">
         <div class="card">
           <div class="card-content">
             <div class="Title">
@@ -378,6 +383,8 @@
             </div>
           </div>
         </div>
+            </a>
+          <a href="metro.aspx">
         <div class="card">
           <div class="card-content">
             <div class="Title">
@@ -404,6 +411,7 @@
             </div>
           </div>
         </div>
+              </a>
         <a href="kanye.aspx">
           <div class="card">
             <div class="card-content">
